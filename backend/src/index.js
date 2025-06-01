@@ -13,6 +13,11 @@ app.get('/api/ping', (req, res) => {
   res.json({ message: 'pong' });
 });
 
+// test page that allows us to call the page
+app.get('/api/hello', (req, res) => {
+  res.json({greeting: 'Welcome to my site!' });
+});
+
 // catch-all 404
 app.use((req, res) => {
   res.status(404).json({ error: 'Not Found' });
